@@ -47,7 +47,7 @@ button{appearance:none;border:0;border-radius:11px;background:var(--green);color
 <h2>Transaction complete.</h2>
 <div class="grid">
 <div class="cell"><div class="label">Recipient</div><div class="value">Yavuz</div></div>
-<div class="cell"><div class="label">Amount</div><div class="value">CHF 1,500</div></div>
+<div class="cell"><div class="label">Amount</div><div class="value">CHF 1,000</div></div>
 <div class="cell"><div class="label">Purpose</div><div class="value">Apple MacBook Pro 14.2&quot;</div></div>
 <div class="cell"><div class="label">Configuration</div><div class="value">M5 · 24GB · 1TB SSD · Space Black</div></div>
 </div>
@@ -73,7 +73,7 @@ const sequence=[
 ["M5 · 24GB · 1TB SSD · Space Black","muted",320],
 ["","",120],
 ["> Funding available","prompt",320],
-["CHF 1,500.00","amount",360]];
+["CHF 1,000.00","amount",360]];
 function addLine(text,cls){const row=document.createElement("div");row.className="line "+(cls||"");row.textContent=text||"\u00A0";log.appendChild(row);row.scrollIntoView({behavior:"smooth",block:"nearest"})}
 async function play(){for(const [t,c,d] of sequence){addLine(t,c);await new Promise(r=>setTimeout(r,d))}const row=document.createElement("div");row.className="line prompt";row.innerHTML="> Awaiting recipient confirmation<span class='cursor'></span>";log.appendChild(row);action.style.display="block"}
 function confetti(){const p=["#45f27d","#cbb37b","#edf4ee","#8f9b91"];for(let i=0;i<46;i++){const x=document.createElement("i");x.className="confetti";x.style.left=Math.random()*100+"vw";x.style.background=p[Math.floor(Math.random()*p.length)];x.style.setProperty("--drift",(Math.random()*180-90)+"px");x.style.animationDelay=Math.random()*.6+"s";document.body.appendChild(x);setTimeout(()=>x.remove(),3600)}}
